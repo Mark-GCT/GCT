@@ -1,0 +1,104 @@
+---
+title: "Contact | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies"
+description: "We are a premium web design agency based in St. Louis, MO specializing in custom designed and coded websites for small businesses across the U.S. Our mission is to help small businesses grow online with beautiful, high-performing websites that get results."
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title"></span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-t.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-t.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/banner-t.jpg" alt="St. Louis skyline reflection in Mississippi River" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
+
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
+
+<section id="cs-contact-490">
+    <div class="cs-container">
+        <!-- Contact Info -->
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">FREE IT ASSESSMENT</h2>
+            <p class="cs-text">
+                Not sure where your IT stands? Our free, no-obligation IT Assessment gives you a clear picture of your current technology environment — and a roadmap to optimize it.
+            </p>
+            
+            <!--Address-->
+            <span class="cs-header">Areas Served</span>
+            <a href="" class="cs-link">
+                ST. LOUIS, MO & NATIONWIDE
+            </a>
+            <!--Email-->
+            <span class="cs-header">Email</span>
+            <a href="mailto:{{ client.email }}" class="cs-link">{{ client.email }}</a>
+            <!--Phone-->
+            <span class="cs-header">Phone</span>
+            <a href="tel:{{ client.phoneForTel }}" class="cs-link">{{ client.phoneFormatted }}</a>
+
+            <!--Social Buttons-->
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.socials.facebook }}" target="_blank">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit google profile" href="{{client.socials.google}}" target="_blank">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="Google logo" width="11" height="11">
+                </a>
+                <a href="{{ client.socials.linkedin }}" class="cs-social-link" target="_blank" aria-label="LinkedIn">
+                    <img class="cs-social-icon" src="/assets/images/badges/LI-In-Bug.png" alt="LinkedIn logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!-- Form -->
+        <form id="cs-form-490" name="Contact Form" method="post" data-netlify="true">
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-490" name="name" placeholder="John/Jane Doe">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-490" name="email" placeholder="name@company.com">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone-490" name="phone" placeholder="+1 (206) 987-6543">
+            </label>
+            <label class="cs-label">
+                How Did You Find Us
+                <input class="cs-input" type="text" id="find-490" name="find-us" placeholder="Social Media, Family, Friend...">
+            </label>
+            <label class="cs-label-message">
+                Message
+                <textarea class="cs-input" required name="Message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
+            </label>
+            <div data-netlify-recaptcha="true"></div>
+        <button class="cs-button-solid" type="submit">Submit Message Now</button>
+        </form>
+    </div>
+</section>
+                                
+
+   
+
+{% endblock %}

@@ -1,0 +1,428 @@
+---
+title: "IT Managed Services Provider | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies"
+description: "Get a 100% custom-coded website for $150/month — no WordPress, no page builders. Veteran-owned St. Louis web design. Free consultation. 98–100 PageSpeed scores guaranteed."
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if kit.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+    
+    <meta name="keywords" content="web design, web design st. louis, web design metro east il, web design belleville, web design small business, web development, web development st. louis, web development belleville, veteran owned, service connected disablity owned business, belleville, fairview heights, shiloh, o'fallon, troy, st. louis, chicago, peoria, united states, illinois, missouri, uk,custom small business website design, web design St. Louis MO, web design Metro East, web design Illinois, web design UK, veteran owned web design agency, custom coded website no WordPress, church website design company, website design $150 per month, nonprofit website design affordable, small business website design Illinois, 100 pagespeed score website, how much does a business website cost" />
+    <meta name="author" content="Gateway Cornerstone Technologies" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IT Managed Services Provider | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies</title>
+    <meta name="description" content="Get a 100% custom-coded website for $150/month — no WordPress, no page builders. Veteran-owned St. Louis web design. Free consultation. 98–100 PageSpeed scores guaranteed.">
+    <link rel="canonical" href="https://gatewaycornerstonetech.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gatewaycornerstonetech.com/">
+    <meta property="og:title" content="IT Managed Services Provider | Gateway Cornerstone Technologies">
+    <meta property="og:description" content="Professional IT managed services for businesses in St. Louis, MO & nationwide. Veteran-owned. Free consultation.">
+    <meta property="og:image" content="https://gatewaycornerstonetech.com/assets/images/stl.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Small Business Website Design | Gateway Cornerstone Web Design">
+    <meta name="twitter:description" content="100% custom-coded websites for $150/month. No WordPress. No bloat. Veteran-owned. Based in St. Louis.">
+    <meta name="twitter:image" content="https://gatewaycornerstone.com/assets/images/stl.jpg">
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    {% include "components/home-schema.html" %}
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">ENTERPRISE IT · SMALL BUSINESS PRICE</span>
+            <h1 class="cs-title">YOUR IT PARTNER <br/> ST. LOUIS & NATIONWIDE</h1>
+            <p class="cs-text">
+                Leveraging 15+ years of enterprise IT experience to bring Fortune 500-grade operations to your organization. Minimize downtime. Maximize growth. 
+                <br><br>
+                Veteran-owned. Based in St. Louis, serving clients nationwide.
+            </p>
+            <div class="cs-button-group">
+                <a href="/contact/" class="cs-button-transparent cs-button">FREE IT ASSESSMENT</a>
+                <a href="/about/" class="cs-button-transparent cs-button">ABOUT US</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/stl.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/stl.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/stl.jpg" alt="St. Louis skyline at night along Mississippi River" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-296">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">WHAT WE DO</span>
+            <h2 class="cs-title">NEVER WORRY ABOUT YOUR WEBSITE</h2>
+            <p class="cs-text">
+                At Gateway Cornerstone, we build custom, high-performing websites for small businesses, churches, and non-profit organizations across the U.S. Every site we create is hand-coded for speed, reliability, and SEO performance—helping your business attract more customers and increase revenue. We handle ongoing updates and maintenance, so you’re never left on your own. Our mission is to be your long-term web partner, supporting your growth and success every step of the way.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <img class="cs-icon" src="/assets/svgs/i1.svg" alt="mobile icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">MOBILE FIRST DESIGN</h3>
+                    <p class="cs-item-text">
+                        We build your site for mobile first, creating optimized lean code that ensures fast load times and a great user experience on all devices. 
+                    </p>
+                </a>
+                <picture class="cs-image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="/assets/images/light.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/light.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/light.jpg" alt="light sculpture sculpture park st. louis mo" width="413" height="266">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <img class="cs-icon" src="/assets/svgs/i2.svg" alt="laptop icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">FULLY RESPONSIVE</h3>
+                    <p class="cs-item-text">
+                        Your website will look and function perfectly on any device, from desktops to smartphones, ensuring a seamless user experience for all visitors.
+                    </p>
+                </a>
+                <picture class="cs-image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="/assets/images/light.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/light.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/light.jpg" alt="light sculpture sculpture park st. louis mo" width="413" height="266">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <img class="cs-icon" src="/assets/svgs/i3.svg" alt="stopwatch icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">OPTIMIZED PAGE SPEED</h3>
+                    <p class="cs-item-text">
+                        If your website takes more than 3 seconds to load, you’re losing potential customers. We build lightning-fast websites that keep visitors engaged and drive conversions.
+                    </p>
+                </a>
+                <picture class="cs-image"  aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="/assets/images/light.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/light.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/light.jpg" alt="light sculpture sculpture park st. louis mo" width="413" height="266">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <img class="cs-icon" src="/assets/svgs/i6.svg" alt="USA icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">BASED IN THE USA</h3>
+                    <p class="cs-item-text">
+                        We are proud to be a US-based and veteran owned web design agency, delivering personalized service and support to our clients across the country.
+                    </p>
+                </a>
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="/assets/images/light.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/light.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/light.jpg" alt="light sculpture sculpture park st. louis mo" width="413" height="266" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1363">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people10.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people10.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people10.jpg" alt="Gateway Cornerstone Web Design developers" width="605868" height="690">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">WHAT WE OFFER</span>
+            <h2 class="cs-title">WEBSITES STARTING $150 PER MONTH </h2>
+            <p class="cs-text">
+                We offer $150 per month for a standard 5 page website. <strong>12 month minimum contract</strong>. Includes design, development, hosting, unlimited edits, 24/7 support, and lifetime updates.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="circle check icon" width="32" height="32">
+                        100% SECURE
+                    </h3>
+                    <p class="cs-item-text">
+                        Our sites are just static HTML and CSS code, meaning there’s literally nothing that can be hacked or go wrong.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="circle check icon" width="32" height="32">
+                        CUSTOM DESIGNS
+                    </h3>
+                    <p class="cs-item-text">
+                        Every site we build is custom designed from scratch to fit your brand and business needs.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="circle check icon" width="32" height="32">
+                        100 PAGESPEED SCORES
+                    </h3>
+                    <p class="cs-item-text">
+                        Our sites have zero bloat, zero waste, and built with purpose so we get perfect 98-100/100 speed scores with Google
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="circle check icon" width="32" height="32">
+                        MONEY BACK GUARANTEE
+                    </h3>
+                    <p class="cs-item-text">
+                        We stand by our work! If we can't design a website that you love, we'll refund your money—no questions asked.
+                    </p>
+                </li>
+            </ul>
+            <a href="/contact/" class="cs-button-solid">SCHEDULE NOW</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-521">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">PERFORMANCE</span>
+            <h2 class="cs-title">WE BUILD WEBSITES THAT PERFORM</h2>
+            <p class="cs-text">
+                When it comes load times not many can get the page speed scores we do. Our custom coded websites are built for performance from the ground up. No bloat, no plugins, no page builders, just clean code that gets results.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" src="/assets/svgs/stat1.svg" loading="lazy" decoding="async" alt="hour glass icon" width="40" height="40">
+                    Better load times means more visitors and more visitors means more customers.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" src="/assets/svgs/stat2.svg" loading="lazy" decoding="async" alt="person icon" width="40" height="40">
+                    Faster websites rank higher in Google search results, driving more organic traffic to your business.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" src="/assets/svgs/stat3.svg" loading="lazy" decoding="async" alt="computer icon" width="40" height="40">
+                    Our sites load in 1 second or less, which leads to a better user experience and higher conversion rates.
+                </li>
+            </ul>
+            <a href="/contact/" class="cs-button-solid">SCHEDULE NOW</a>
+        </div>
+        <!--Image Group-->
+        <div class="cs-image-group">
+            <ul class="cs-stat-group">
+                <li class="cs-stat">
+                    <span class="cs-number">100%</span>
+                    <span class="cs-desc">Satisfaction Guaranteed</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">100</span>
+                    <span class="cs-desc">Page Speed Scores</span>
+                </li>
+            </ul>
+            <!--Picture-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/stats.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/stats.png">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/stats.png" alt="website performance stats" width="630" height="461">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-1087">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">OUR PRICING</span>
+            <h2 class="cs-title">PRICING FOR EVERY BUDGET</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item cs-popular">
+                <span class="cs-package">MONTHLY 150</span>
+                <span class="cs-price">$150 <span class="cs-price-small"><small>/month</small></span>
+                </span>
+                <p class="cs-item-p">
+                    Standard website up to 5 pages + hosting + unlimited edits
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Design & Development
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Hosting Included
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        24/7 Support
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Lifetime Updates
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        +$250 To Add A Blog
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                        <li class="cs-li cs-disabled">
+                        $100 fee Per Page after 5
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">MONTHLY 250</span>
+                <span class="cs-price">$250 <span class="cs-price-small"><small>/month</small></span>
+                </span>
+                <p class="cs-item-p">
+                    Standard website up to 10 pages + blog + hosting + unlimited edits
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Design & Development
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Blog & Hosting Included
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        24/7 Support
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Lifetime Updates
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Blog Setup And Configuration
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                        <li class="cs-li cs-disabled">
+                        $100 fee Per Page after 10
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">E-COMMERCE</span>
+                <span class="cs-price">$10,000 
+                </span>
+                <p class="cs-item-p">
+                    E-commerce website up to 20 pages + blog + hosting. Shopify platform recommended for e-commerce, but we can build on any platform.
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Design And Development
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Custom Shopify Store
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Configure Any And All Apps
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Integrated Shipping
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Shopify Tutorial Walkthrough
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Fully Editable In Shopify CMS
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+<!--
+<section id="reviews-354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Trusted by Thousand of People & Companies</h2>
+            <p class="cs-text">
+                At Stitch Cleaning Service, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations. 
+                </p>
+                <span class="cs-name">John Doe</span>
+                <span class="cs-job">Chief Executive</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.
+                </p>
+                <span class="cs-name">Robert Henrich</span>
+                <span class="cs-job">CEO, HK Traders</span>
+            </li>
+        </ul>
+    </div>
+</section> -->                    
+    
+    {% include 'sections/cta.html' %}
+                                
+{% endblock %}

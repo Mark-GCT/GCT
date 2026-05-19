@@ -1,0 +1,95 @@
+---
+title: "About — Veteran-Owned Web Design | St. Louis, MO & Nationwide | Gateway Cornerstone Web Design"
+description: "Meet Mark Elmore — 15+ years in IT, U.S. veteran, and founder of Gateway Cornerstone Web Design. Custom websites for small businesses & faith-based organizations."
+permalink: "/about/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/stl-m.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/stl-m.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/about.css">
+
+    <title>About — Veteran-Owned Web Design | Gateway Cornerstone Web Design | St. Louis, MO</title>
+    <meta name="description" content="Meet Mark Elmore — 15+ years in IT, U.S. veteran, and founder of Gateway Cornerstone Web Design. Custom websites for small businesses & faith-based organizations.">
+    <link rel="canonical" href="https://gatewaycornerstone.com/about/">
+
+    {% include "components/about-schema.html" %}
+    
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title"></span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-t.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-t.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/banner-t.jpg" alt="St. Louis skyline reflection in Mississippi River" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-311">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/stl-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/stl-m.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/stl-m.jpg" alt="St. Louis skyline at night" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/about.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/about.png">
+                <img loading="lazy" decoding="async" src="/assets/images/about.png" alt="Mark Elmore, owner of Gateway Cornerstone Web Design" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">ABOUT GATEWAY CORNERSTONE</span>
+            <h2 class="cs-title">VETERAN-OWNED FAITH DRIVEN WEB DESIGN IN ST. LOUIS & NATIONWIDE</h2>
+            <p class="cs-text">
+                Hi, I'm Mark Elmore — founder of Gateway Cornerstone Web Design and a web developer with over 15 years in IT.
+                <br><br>
+                In that time, I've done it all: desktop support, large-scale infrastructure projects, and full website builds. But it was development that stuck. It gave me the flexibility to show up fully for what matters most to me — my family, my community, and my faith. Those three things don't just inform my personal life; they shape every professional decision I make. <strong>Faith</strong>, <strong>integrity</strong>, and <strong>excellence</strong> aren't a tagline here. <strong>They're the foundation.</strong>
+                <br><br>
+                So why did I launch Gateway Cornerstone? Because I kept seeing the same problem everywhere I looked.
+                <br><br>
+                Businesses and organizations would pour time into a DIY website builder, or hand their brand over to a generic WordPress theme — and end up with something slow, forgettable, and vulnerable to security threats. They weren't getting a competitive tool. They were getting a digital placeholder.
+                <br><br>
+                <strong>You deserve better than that.</strong>
+                <br><br>
+                At Gateway Cornerstone, I work with a trusted network of independent specialists — designers, strategists, and technical experts — brought in to match the specific needs of your project. This means you get focused, senior-level talent without the overhead of a large agency, and you always have a direct line to me.
+                <br><br>
+                I'm especially passionate about partnering with <strong>small businesses and purpose-driven organizations</strong> — including faith-based nonprofits, ministries, and churches. I understand your goals aren't always purely commercial, and your budget rarely is either. You need a website that works as hard as your mission does, and I know how to build that.
+                <br><br>
+                A great website isn't just an online presence. It's a handshake, a first impression, and your hardest-working team member — available 24/7.
+                <br><br>
+                <strong>Are you ready to build something that actually works for you? Let's talk.</strong>
+            </p>
+            <a href="/contact/" class="cs-button-solid">SCHEDULE NOW</a>
+        </div>
+    </div>
+</section>
+                                
+
+    
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

@@ -1,0 +1,88 @@
+---
+title: "Blog | St. Louis, MO & Nationwide | Gateway Cornerstone Web Design"
+description: "Get a 100% custom-coded website for $150/month — no WordPress, no page builders. Veteran-owned St. Louis web design. Free consultation. 98–100 PageSpeed scores guaranteed."
+permalink: "/blog/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/stl.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/blog.css">
+{% endblock %}
+
+{% block body %}
+  
+  <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-712">
+        <div class="cs-container">
+            <span class="cs-int-title"></span>
+        </div>
+    
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/banner-t.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/banner-t.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/banner-t.jpg" alt="St. Louis skyline reflection in Mississippi River" width="1280" height="568" aria-hidden="true">
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Blog Listings                -->
+    <!-- ============================================ -->
+
+    <div id="blog-listing">
+        <div class="cs-container">
+            {% if collections.post | length == 0 %}
+                <h1 class="cs-title">No Recent Posts</h1>
+            {% else %}
+                {%- for post in collections.post | reverse -%}
+                    <article class="cs-article">
+                        <picture class="cs-article-image">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | jpeg %}" type="image/jpeg">
+                            <!--Tablet Image-->
+                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
+                            <!--Desktop Image-->
+                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | avif %}" type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | webp %}" type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" type="image/jpeg">
+                            <img src="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" alt="{{ post.data.alt }}" width="824" height="400" decoding="async">
+                        </picture>
+                        <div class="cs-article-group">
+                            <div class="cs-author-group">
+                                <picture class="cs-author-img">
+                                    <img src="/assets/svgs/profile.svg" alt="Profile icon" width="32" height="32" decoding="async" loading="lazy" aria-hidden="true"/>
+                                </picture>
+                                <span class="cs-author-name">{{ post.data.author }}</span>
+                                <span aria-hidden="true" class="cs-dot"></span>
+                                <span class="cs-date">{{ post.date | postDate }}</span>
+                            </div>
+                            <h2 class="cs-article-title">
+                                {{ post.data.title }}
+                            </h2>
+                            <p class="cs-article-desc">
+                                {{ post.data.description }}
+                            </p>
+                            <a href="{{ post.url }}" class="cs-button-solid">Continue Reading</a>
+                        </div>
+                    </article>
+                {%- endfor -%}
+            {% endif %}
+        </div>
+
+        {% include 'components/featured-posts.html' %}
+    </div>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

@@ -1,0 +1,109 @@
+---
+title: "Custom Web Design Services | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies"
+description: "Hand-coded websites with 100/100 Google PageSpeed scores. No WordPress, no plugins. $150/month — includes hosting, unlimited edits & 24/7 support. St. Louis web design agency."
+permalink: "/webdesign/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/creek.png" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/creek.png" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/webdesign.css">
+
+    <title>Custom Web Design Services | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies</title>
+    <meta name="description" content="Hand-coded websites with 100/100 Google PageSpeed scores. No WordPress, no plugins. $150/month — includes hosting, unlimited edits & 24/7 support. St. Louis web design agency.">
+    <link rel="canonical" href="https://gatewaycornerstone.com/webdesign/">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title"></span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-t.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-t.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/banner-t.jpg" alt="St. Louis skyline reflection in Mississippi River" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-852">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">PROFESSIONAL <span class="cs-color">WEB DESIGN</span> & DEVELOPMENT SERVICES IN ST. LOUIS & NATIONWIDE</h1>
+            <h2>100% CUSTOM CODE - <span class="cs-color">NO</span> PAGE BUILDERS. <span class="cs-color">NO</span> WORDPRESS. <span class="cs-color">NO</span> LIMITS.</h2>
+            <p>
+                At Gateway Cornerstone Web Design, we take a different approach to building websites. Instead of relying on page builders or WordPress templates, we hand-code every site from the ground up. This allows for completely custom designs, lightning-fast performance, zero unnecessary bloat, and unmatched security.
+                Our sites load instantly, achieve top scores on Google PageSpeed Insights, and never require constant updates or plugin maintenance. The result? A website that performs flawlessly, ranks better, and works harder for your business.
+            </p>
+
+            <h3>WHY IT MATTERS</h3>
+            <ul>
+                <li><strong>Faster Load Times</strong> - Speed directly affects conversions, rankings, and ad performance.</li>
+                <li><strong>Higher Conversion Rates</strong> - A faster site keeps visitors engaged and reduces bounce rates.</li>
+                <li><strong>Better Ad Performance</strong> - Google rewards fast sites with lower cost-per-click and higher ad quality scores.</li>
+                <li><strong>Stronger Security</strong> - No databases, no plugins, no vulnerabilities—just clean, static code.</li>
+                <li><strong>Improved SEO</strong> - Speed, user experience, and engagement metrics all boost your Google rankings.</li>
+                <li><strong>Enhanced Google Business Profile</strong> - A fast, optimized site supports better visibility in local Maps results.</li>
+            </ul>
+
+            <h3>SPEED IS EVERYTHING</h3>
+            <p>
+                Online competition is fierce, and load time can make or break your success. Studies show that if your website takes more than 3 seconds to load, you could lose up to half your visitors before they even see your page. Our custom-coded sites load so fast that visitors stay, engage, and convert—giving you an edge over competitors using slow, bloated builders.
+            </p>
+
+            <h3>BETTER ADS PERFORMANCE</h3>
+            <p>
+                A fast-loading website doesn’t just make visitors happy—it makes Google happy too. Google’s ad platform favors high-performance sites, meaning faster pages = lower cost-per-click and higher ROI on every campaign.
+            </p>
+
+            <h3>SECURITY YOU CAN TRUST</h3>
+            <p>
+                Unlike WordPress or other CMS platforms that depend on constant plugin updates, our custom sites have no databases, no back-end vulnerabilities, and nothing to hack. They’re built using static HTML and CSS, secure by design and maintenance-free for years to come.
+            </p>
+            
+            <h3>BUILT TO RANK</h3>
+            <p>
+                Speed and user engagement are key factors in Google’s algorithm. When your site loads instantly and provides a great user experience, visitors stay longer and click deeper—signaling to Google that your site is valuable and relevant. That leads to better rankings, higher visibility, and more leads for your business.
+            </p>
+
+            <h3>STRENGTHEN YOUR GOOGLE PROFILE</h3>
+            <p>
+                A faster website can also boost your Google Business Profile visibility in local searches and Maps. Combine that with a well-optimized profile—complete with great reviews, images, and consistent updates—and you’ll see noticeable growth in local leads and conversions.
+            </p>
+
+            <h4>At Gateway Cornerstone Web Design, we don’t just build websites. We build digital foundations designed to perform, convert, and grow with your business.</h4>
+
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/creek.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/creek.png">
+                <img decoding="async" src="/assets/images/creek.png" alt="Creek in Rocky Mountain National Forest Estes Park, CO" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

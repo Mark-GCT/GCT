@@ -312,4 +312,592 @@
         }
     }
 }
-                                
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-521 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 60px */
+            gap: clamp(3rem, 10vw, 3.75rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-ul {
+            width: 80%;
+            /* 32px - 36px */
+            margin: 0 0 clamp(2rem, 4vw, 2.25rem) 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 24px - 32px */
+            row-gap: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .cs-li {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            list-style: none;
+            line-height: 1.5em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (32/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: (630/16rem);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* 40px - 48px */
+            row-gap: clamp(2.5rem, 6vw, 3rem);
+            /* sends it to the top in the first position */
+            order: -1;
+        }
+
+        .cs-stat-group {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: (16/16rem);
+        }
+
+        .cs-stat {
+            list-style: none;
+            max-width: (230/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (8/16rem);
+        }
+
+        .cs-topper {
+            color: #767676;
+        }
+
+        .cs-number {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+            line-height: 1.2em;
+            font-weight: 900;
+            color: var(--headerColor);
+        }
+
+        .cs-desc {
+            font-size: clamp(0.875rem, 1rem, 1.25rem);
+            line-height: 1.5em;
+            font-weight: 400;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 244px - 339px, changes clamp at tablet */
+            height: clamp(14rem, 62vw, 21.1875rem);
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-521 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .cs-content {
+            width: 71%;
+            max-width: (540/16rem);
+        }
+
+        .cs-image-group {
+            width: 68%;
+        }
+
+        .cs-stat-group {
+            justify-content: flex-start;
+        }
+
+        .cs-picture {
+            /* 340px - 461px */
+            height: clamp(21.25rem, 35vw, 28.8125rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-521 {
+            .cs-title,
+            .cs-text,
+            .cs-li,
+            .cs-desc {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-number,
+            .cs-topper {
+                color: var(--secondary);
+            }
+
+            .cs-button-solid {
+                background-color: var(--secondary);
+                color: #1a1a1a;
+
+                &:before {
+                    background-color: #fff;
+                }
+            }
+
+             .cs-icon {
+                /* turns it white */
+                filter: grayscale(1) brightness(1000%);
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-1087 {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16em);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-topper {
+            color: #767676;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.8vw, 1.25rem);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            max-width: (500/16rem);
+            margin: 0;
+            /* 20px - 40px top *
+            /* 16px - 32px left & right */
+            padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+            background-color: #f7f8f8;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+
+            &.cs-popular {
+                background-color: #1a1a1a;
+
+                &:before {
+                    content: "Popular";
+                    text-transform: uppercase;
+                    font-size: (13/16rem);
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    letter-spacing: 0.01em;
+                    padding: (8/16rem) (20/16rem);
+                    background: var(--secondary);
+                    color: var(--headerColor);
+                    opacity: 1;
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    right: 0;
+                }
+
+                .cs-package {
+                    color: #888;
+                }
+
+                .cs-price,
+                .cs-item-p,
+                .cs-li {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-li {
+                    &.cs-disabled {
+                        filter: grayscale(1) brightness(550%);
+                    }
+                }
+
+                .cs-icon {
+                    /* if icon is not black, this turns it white */
+                    filter: grayscale(1) brightness(1000%);
+                }
+
+                .cs-button-solid {
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--primary);
+                    }
+                    &:before {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .cs-package {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.4vw, 1rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 0 (8/16rem) 0;
+            color: #767676;
+            display: block;
+        }
+
+        .cs-price {
+            /* 31px - 49px */
+            font-size: var(--headerFontSize);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 900;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-p {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            font-weight: 400;
+            /* 16px - 24px */
+            margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-ul {
+            /* 32px - 48px */
+            margin: (24/16rem) 0 0;
+            padding: (24/16rem) 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (12/16rem);
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(
+                    90deg,
+                    rgba(232, 232, 232, 0.2) 0%,
+                    #e8e8e8 53.78%,
+                    rgba(232, 232, 232, 0.2) 100%
+                );
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-li {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            list-style: none;
+            line-height: 1.2em;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            justify-content: space-between;
+            /* push everything to the top so if the li goes to two lines the icon stays at the top */
+            align-items: flex-start;
+            gap: (16/16rem);
+
+            &.cs-disabled {
+                opacity: 0.5;
+
+                .cs-icon {
+                    filter: grayscale(1) brightness(300%);
+                }
+            }
+        }
+
+        .cs-icon {
+            width: (18/16rem);
+            height: auto;
+            display: block;
+            filter: grayscale(1) brightness(300%);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-price-button {
+            /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
+            margin-top: auto;
+            width: 100%;
+            border-radius: 0;
+            &:before {
+                border-radius: 0;
+            }
+        }
+
+        .cs-floater {
+            /* 76PX - 121PX */
+            width: clamp(4.75rem, 7vw, 7.5625rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cs-floater1 {
+            top: 0;
+            left: 0;
+        }
+
+        .cs-floater2 {
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-1087 {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .cs-option2 {
+            top: auto;
+            bottom: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-1087 {
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .cs-title,
+            .cs-text,
+            .cs-item-p,
+            .cs-package,
+            .cs-li,
+            .cs-price,
+            .cs-plan {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-item {
+                background-color: rgba(0, 0, 0, 0.4);
+                &.cs-popular {
+                    background-color: rgba(144, 2, 176, 0.6);
+
+                    .cs-package {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .cs-topper {
+            color: var(--secondary);
+            }
+
+            .cs-icon {
+                /* makes icon white (if it wasnt black to start) */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-price-button {
+                background-color: var(--bodyTextColorWhite);
+                color: #1a1a1a;
+                transition: color 0.3s;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

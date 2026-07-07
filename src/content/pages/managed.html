@@ -1,16 +1,168 @@
 ---
-title: "Page title for <title> and OG tags"
-description: "Description for <meta> description and OG tags"
+title: "Managed IT Services | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies"
+description: "Gateway Cornerstone Technologies is a veteran-owned MSP serving small businesses in the STL Metro East and Illinois region with enterprise-grade IT, cybersecurity, web design, and AI services. Free IT Assessment Available."
 permalink: "/managed/"
-image: "OPTIONAL - If an image path is specified here, it will be used for that page's OG image. Useful for blog posts (implemented as standard with this kit)"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner-t.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/creek.png" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/creek.png" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/managed.css">
+
+    <title>Managed IT Services | St. Louis, MO & Nationwide | Gateway Cornerstone Technologies</title>
+    <meta name="description" content="Gateway Cornerstone Technologies is a veteran-owned MSP serving small businesses in the STL Metro East and Illinois region with enterprise-grade IT, cybersecurity, web design, and AI services. Free IT Assessment Available.">
+    <link rel="canonical" href="https://gatewaycornerstonetech.com/managed/">
 {% endblock %}
 
 {% block body %}
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-712">
+        <div class="cs-container">
+            <span class="cs-int-title"></span>
+        </div>
+
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/banner-t.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/banner-t.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/banner-t.jpg" alt="St. Louis skyline reflection in Mississippi River" width="1280" height="568" aria-hidden="true">
+        </picture>
+    </div>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-1087">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">IT MANAGED SERVICES PRICING</span>
+            <h2 class="cs-title">THREE TIERED OPTIONS</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-package">CORNERSTONE ESSENTIAL</span>
+                <span class="cs-price">$495 <span class="cs-price-small"><small><small>/month</small></small></span></span>
+                <p class="cs-item-p">
+                    <i>Best for teams of 3–10 users</i>
+                    <br><br>
+                    Straightforward IT that just works. Essential is built for small teams who need reliable technology without the complexity — or the surprises. We monitor your systems, keep everything patched and secure, and answer the phone when something goes wrong. No contracts full of fine print. No bill that changes every month. One flat rate, everything covered.
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Remote Monitoring & Management (RMM)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Endpoint Detection & Response (EDR/Antivirus)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Patch Management — operating system & software
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Business-hours Help Desk support (Monday–Friday, 9am–5pm)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Network Monitoring
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                        <li class="cs-li">
+                        Quarterly IT Review
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+            <li class="cs-item cs-popular">
+                <span class="cs-package">CORNERSTONE COMPLETE</span>
+                <span class="cs-price">$1,495 <span class="cs-price-small"><small><small>/month</small></small></span></span>
+                <p class="cs-item-p">
+                    <i>Best for teams of 10–30 users</i>
+                    <br><br>
+                    Full-coverage IT for businesses that can't afford downtime. Complete goes beyond the basics — your Microsoft 365 environment, your cloud backups, your email security, and your team's credentials are all actively managed and protected. You get priority support and a security stack that matches the threats your business actually faces.
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Everything in Cornerstone Essential
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Microsoft 365 / Google Workspace Management
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Advanced Threat Detection (MDR)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Priority Help Desk support (Monday–Friday, 8am–6pm)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Annual Security Awareness Training
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Semi-Annual IT Business Review
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">CORNERSTONE COMMAND</span>
+                <span class="cs-price">$2,995 <span class="cs-price-small"><small><small>/month</small></small></span> 
+                </span>
+                <p class="cs-item-p">
+                    <i>Best for teams of 20–40 users</i> 
+                    <br><br>
+                    Enterprise-grade IT built for businesses that have more at stake. Command gives you 24/7 monitoring, compliance support, a dedicated account engineer, and a virtual CIO who helps you make smart technology decisions — not just fix problems after they happen. If your business operates in a regulated industry or works with government, defense, or healthcare, this is where you belong.
+                </p>
+                <a href="/contact/" class="cs-button-solid cs-price-button">SCHEDULE NOW</a>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        Everything in Cornerstone Complete
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Compliance Support (HIPAA, CMMC, PCI)
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        24/7 SOC Monitoring & Alerting
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Virtual CIO (vCIO) — Quarterly Strategy Sessions
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        Disaster Recovery Planning & Testing
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                    <li class="cs-li">
+                        After-Hours Emergency Support
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg" alt="checkmark" width="18" height="18">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+    {% include 'sections/cta.html' %}
 {% endblock %}

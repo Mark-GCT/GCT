@@ -1,4 +1,241 @@
 /*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-852 {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+        /* clips the wave background from causing overflow issues when it goes off screen */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (738/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        h2 {
+            font-size: (32/16rem);
+            margin-top: (32/16rem);
+        }
+
+        h3 {
+            font-size: (24/16rem);
+            color: var(--primary);
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: (20/16rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: (32/16rem);
+        }
+
+        .cs-no-margin {
+            margin: 0;
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--bodyTextColor);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--primary);
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: (24/16rem);
+            margin: 0 0 (32/16rem) 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        ul {
+            li {
+                list-style: none;
+                color: inherit;
+                position: relative;
+
+                &:before {
+                    /* custom list bullet */
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: block;
+                    top: (10/16rem);
+                    left: (-12/16rem);
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cs-image-group {
+            width: 50%;
+            max-width: (433/16rem);
+            display: none;
+            flex-direction: column;
+            gap: (20/16rem);
+            position: relative;
+
+            &:after {
+                /* colored box */
+                content: "";
+                width: 100%;
+                /* 177px - 258px */
+                height: clamp(11.0625rem, 19vw, 16.125rem);
+                background: var(--primary);
+                border-radius: (100/16rem) 0 (100/16rem);
+                opacity: 0.15;
+                display: block;
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 300px - 520px */
+            height: clamp(18.75rem, 40vw, 32.5rem);
+            box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+            /* 125px - 200px */
+            border-radius: 0 clamp(7.8125rem, 15vw, 12.5rem) 0
+                clamp(7.8125rem, 15vw, 12.5rem);
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-852 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            flex: none;
+            width: 60%;
+            /* sens it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-image-group {
+            display: flex;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #content-page-852 {
+            background-color: var(--dark);
+
+            .cs-title,
+            .cs-text,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            li,
+            p {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-color,
+            a {
+                color: var(--primaryLight);
+            }
+
+            p,
+            li {
+                color: #ebebeb;
+            }
+
+            .cs-picture {
+                border-color: var(--dark);
+                background-color: var(--dark);
+            }
+        }
+    }
+}
+
+
+
+/*-- -------------------------- -->
 <---          Pricing           -->
 <--- -------------------------- -*/
 
@@ -35,6 +272,103 @@
             align-items: center;
             position: relative;
             z-index: 10;
+        }
+
+        .cs-platforms {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+            margin: (8/16rem) 0 0;
+            padding: (10/16rem) (20/16rem);
+            background-color: #f7f8f8;
+            border-radius: 100px;
+        }
+
+        .cs-platform-badge {
+            font-size: (13/16rem);
+            font-weight: 600;
+            color: var(--bodyTextColor);
+            display: flex;
+            align-items: center;
+            gap: (6/16rem);
+        }
+
+        .cs-platform-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+            border-radius: (4/16rem);
+            font-size: (11/16rem);
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.cs-copilot {
+                background-color: #0078d4;
+            }
+
+            &.cs-claude {
+                background-color: #d97757;
+            }
+        }
+
+        .cs-platform-sep {
+            width: 1px;
+            height: (20/16rem);
+            background-color: #e8e8e8;
+        }
+
+        .cs-platform-note {
+            font-size: (12/16rem);
+            color: #767676;
+            margin-top: (10/16rem);
+            display: block;
+        }
+
+        .cs-toggle-wrap {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-toggle-group {
+            display: inline-flex;
+            gap: (4/16rem);
+            background-color: #f7f8f8;
+            border-radius: 100px;
+            padding: (4/16rem);
+        }
+
+        .cs-toggle-btn {
+            font-family: var(--bodyFont);
+            font-size: (13/16rem);
+            font-weight: 600;
+            padding: (8/16rem) (20/16rem);
+            color: var(--bodyTextColor);
+            background-color: transparent;
+            border: none;
+            border-radius: 100px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &.cs-active {
+                color: #fff;
+                background-color: var(--primary);
+            }
+        }
+
+        .cs-price-view {
+            width: 100%;
+            display: none;
+            position: relative;
+            z-index: 10;
+
+            &.cs-active {
+                display: block;
+            }
         }
 
         .cs-card-group {
@@ -93,8 +427,13 @@
 
                 .cs-price,
                 .cs-item-p,
-                .cs-li {
+                .cs-li,
+                .cs-setup-note {
                     color: var(--bodyTextColorWhite);
+                }
+
+                .cs-setup-note strong {
+                    color: #fff;
                 }
 
                 .cs-li {
@@ -140,6 +479,62 @@
             font-weight: 900;
             margin: 0;
             color: var(--headerColor);
+        }
+
+        .cs-addon-label {
+            font-size: (13/16rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-band-list {
+            width: 100%;
+            margin: (12/16rem) 0 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: (6/16rem);
+        }
+
+        .cs-band {
+            font-size: (13/16rem);
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: (8/16rem) (14/16rem);
+            background-color: #f7f8f8;
+            border-radius: (8/16rem);
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-band-users {
+            color: var(--bodyTextColor);
+        }
+
+        .cs-band-price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cs-setup-note {
+            font-size: (12/16rem);
+            text-align: inherit;
+            margin: (8/16rem) 0 0;
+            color: #767676;
+            display: block;
+
+            strong {
+                color: var(--headerColor);
+                font-weight: 700;
+            }
         }
 
         .cs-item-p {
@@ -204,6 +599,23 @@
             }
         }
 
+        .cs-group-title {
+            /* 10px - 11px */
+            font-size: clamp(0.625rem, 1vw, 0.6875rem);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            list-style: none;
+            font-weight: 700;
+            width: 100%;
+            margin: (8/16rem) 0 0;
+            padding: 0;
+            color: var(--primary);
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
         .cs-icon {
             width: (18/16rem);
             height: auto;
@@ -252,8 +664,8 @@
         }
 
         .cs-price-button {
-            /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
-            margin-top: auto;
+            /* 24px - 32px, keeps button spacing consistent across cards instead of getting pushed down to fill leftover stretch height */
+            margin-top: clamp(1.5rem, 3vw, 2rem);
             width: 100%;
             border-radius: 0;
             &:before {
@@ -280,6 +692,105 @@
             bottom: 0;
             right: 0;
         }
+
+        .cs-addons {
+            width: 100%;
+            /* 24px - 32px */
+            margin-top: clamp(1.5rem, 3vw, 2rem);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-addons-title {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 3vw, 1.5625rem);
+            margin-bottom: (8/16rem);
+        }
+
+        .cs-addons-sub {
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            max-width: (560/16rem);
+            margin: 0 0 (24/16rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-addon-table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8f8;
+            border-radius: (16/16rem);
+            overflow: hidden;
+        }
+
+        .cs-addon-row {
+            font-size: (13/16rem);
+            list-style: none;
+            width: 100%;
+            /* 12px - 16px */
+            padding: clamp(0.75rem, 1.6vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+            display: flex;
+            flex-direction: column;
+            gap: (4/16rem);
+            border-bottom: 1px solid #e8e8e8;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .cs-addon-name {
+            font-weight: 600;
+            color: var(--headerColor);
+
+            small {
+                font-size: (11/16rem);
+                font-weight: 400;
+                color: #767676;
+                display: block;
+                margin-top: (2/16rem);
+            }
+        }
+
+        .cs-addon-price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cs-license-note {
+            width: 100%;
+            /* 20px - 28px */
+            margin-top: clamp(1.5rem, 3vw, 2rem);
+            padding: (20/16rem) (24/16rem);
+            background-color: #f7f8f8;
+            border-radius: (12/16rem);
+            display: flex;
+            gap: (14/16rem);
+            align-items: flex-start;
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            position: relative;
+            z-index: 10;
+
+            p {
+                font-size: (13/16rem);
+                line-height: 1.7em;
+                text-align: left;
+                margin: 0;
+                color: var(--bodyTextColor);
+
+                strong {
+                    color: var(--headerColor);
+                }
+            }
+        }
+
+        .cs-license-icon {
+            /* prevents the icon from being squished by flexbox */
+            flex-shrink: 0;
+            font-size: (16/16rem);
+        }
     }
 }
 
@@ -295,6 +806,16 @@
         .cs-option2 {
             top: auto;
             bottom: 0;
+        }
+
+        .cs-addon-row {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-addon-name small {
+            margin-top: (4/16rem);
         }
     }
 }
@@ -346,6 +867,52 @@
                 &:hover {
                     color: #fff;
                 }
+            }
+
+            .cs-platforms,
+            .cs-toggle-group,
+            .cs-band,
+            .cs-addon-table {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .cs-platform-badge,
+            .cs-platform-note,
+            .cs-toggle-btn,
+            .cs-band-users,
+            .cs-addon-name,
+            .cs-addon-name small,
+            .cs-addons-sub,
+            .cs-setup-note,
+            .cs-license-note p {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-setup-note strong,
+            .cs-addon-name,
+            .cs-license-note p strong {
+                color: #fff;
+            }
+
+            .cs-platform-sep,
+            .cs-addon-row {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .cs-toggle-btn.cs-active {
+                color: #fff;
+                background-color: var(--secondary);
+            }
+
+            .cs-group-title,
+            .cs-band-price,
+            .cs-addon-price {
+                color: var(--secondary);
+            }
+
+            .cs-license-note {
+                background-color: rgba(0, 0, 0, 0.4);
             }
         }
     }
